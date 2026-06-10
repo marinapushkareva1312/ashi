@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashi — AI Voice Journal</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #c084fc;
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 40px;
+        }
+        .entry {
+            background: #1a1a1a;
+            border-left: 3px solid #c084fc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .date {
+            color: #c084fc;
+            font-size: 0.85em;
+            margin-bottom: 8px;
+        }
+        .said {
+            color: #aaa;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .analysis {
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ashi 🎙️</h1>
+    <p class="subtitle">Your AI Voice Journal</p>
+    <div id="entries"></div>
+
+    <script>
+        fetch('/journal')
+            .then(r => r.json())
+            .then(data => {
+                const container = document.getElementById('entries');
+                if (data.length === 0) {
+                    container.innerHTML = '<p style="text-align:center;color:#888">No entries yet. Run app.py to add your first entry!</p>';
+                    return;
+                }
