@@ -1,7 +1,12 @@
 [
   {
-    "date": "2026-06-10 09:29",
-    "said": " Testing? Is it okay?",
-    "analysis": "There are no wins or losses mentioned in the provided text. The text \"Testing? Is it okay?\" is simply a question and does not contain any information about wins or losses."
+    "date": "2026-06-10 10:03",
+    "said": " I'm going to the Georgian Zoo class today at 7pm.",
+    "analysis": "There are **no wins or losses** to extract from this text. It simply describes a plan to attend a \"Georgian Zoo class\" at 7pm."
+  },
+  {
+    "date": "2026-06-10 10:03",
+    "said": "test text",
+    "analysis": "test analysis"
   }
 ]
