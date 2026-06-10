@@ -1,0 +1,4 @@
+.env
+journal.json
+voice.wav
+__pycache__/
